@@ -49,8 +49,8 @@ Suppliers
         Shipping Companies
 
 E. THE ENVIRONMENT
-A java program running a operating system of Windows 7 or higher, Mac OS X, or
-linux. The operating system in question also needs to be able to run a MySQL
+A Java program running a operating system of Windows 7 or higher, Mac OS X, or
+Linux. The operating system in question also needs to be able to run a MySQL
 database.
 
 The program should allow for a receipt printer, a bar code scanner, and a credit
