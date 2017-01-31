@@ -99,23 +99,19 @@ approval, and if the user currently logged in is not approved for those
 functions, an override prompt will appear. Special receipt messages can be
 stored locally and referenced at time of receipt printing.
 
-Users: Login will mostly be handled by the database; when a user attempts to
-log in the database will validate their uName and pWord, and the code will
-handle locking/unlocking based on the signal from the database. Managing
-accounts (CRUD) will all be handled by the database; all CRUD functions will be
-located there, and can be used after user validation (see Security Settings).
-Overrides will perform CRUD operations on any database values, after user
-validation (see Security Settings).
+Users: Login will be handled by the database; when a user attempts to
+login, the database will validate their username and password, and the code will
+lock or unlock appropriately. All account management functions operate on the database, 
+and can only occur after user validation (see Security Settings). Overrides will perform 
+operations on any database values, after user validation (see Security Settings).
 
 Security Settings: A user database will be maintained, with username, password,
 and privileges. In order to validate privilege, a database call will be made to
 ensure that the user has appropriate authority to perform whatever actions they
 are attempting to perform.
 
-Tax: Every inventory item will be given an enumeration that corresponds to a
-value in a separate tax database. The local machine will gather the appropriate
-information and calculate tax.
-
+Tax: On checkout, the purchased items costs will be multiplied by an administrator supplied
+tax rate to calculate the final cost.
 
 G. COMPETING SOFTWARE
 1. Eposnow
