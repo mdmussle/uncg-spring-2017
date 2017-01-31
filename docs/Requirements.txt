@@ -24,29 +24,29 @@ sells non-electronic games and cards. The machine will be equipped with a cash
 drawer, and a credit card reader.
 
 D. CUSTOMERS AND USERS
-Children and Adults - Buyers of all ages
-Sectors in which the stores operate
-    Face to face commerce in a retail setting
-    Seller to customer online setting
-People who work within the domain
-    Sales associates-Floor Staff
-        High School to Associate's Level Education
-        Possibly Students
-        Experienced with Technology
-        Sale Associates-Cashiers
-    Background
-        High School to Associate's Level Education
-        Possibly Students - Part Time Worker
-        Experienced with Technology
-Managers and Assistant Managers
-    Background
-        Associate’s to BS Level of Education
-        Full Time
-        Experienced with Technology, Handling Stock and Sales, and Scheduling of Employees
-Suppliers
-        Building Owner
-        Banking and Credit Companies
-        Shipping Companies
+
+CUSTOMERS
+Customers of the game store include adults and adolescents, both groups can be expected to represent a repeat customer base. The
+demographics of the customer base will be based upon the physical location of the store, variety of merchandise sold, volume of
+inventory, and the pricing of the merchandise. Due to the single location of the store and non-electronic nature of the stock,
+face-to-face and online commerce can be expected to be the two ways in which the system is used to sell merchandise.   
+
+USERS 
+Sales associates include the floor staff who are in charge of stocking goods and maintaining the appearance of the store. Additional
+sale associates include salespersons and cashiers who assist customers and encourage purchases on the sales floor, they interact
+directly with other employees in the workplace and incoming customers. The sales associates will need to have sufficient knowledge of
+how to operate the software in order to create and complete transactions. In the event of a conflict during a transaction, it is
+expected that a manager or supervisor will be called to give access to functions other than basic transactions.
+
+Managers and shift supervisors are employees who are in control of delegating tasks and ensuring proper optimization of store
+functions; they have special access to the software that associates do not have. Each supervisor is given a code that can be entered
+into the system in order to complete returns, enter a “No Sale,” and resolve conflicts that may arise during a transaction. As such,
+managerial staff will require a higher level of training in regards to the software.
+
+Outlier users of the system consist of suppliers of merchandise and shipping companies that deliver stock to the store and to online
+customers. Banking and credit card companies represent users of the system based on their monetary communication with the system. If
+the store has a lease or a mortgage then either a bank or a landlord will have an indirect role within the system. These users will
+have little to no direct access to the software, but they will receive communication from it.
 
 E. THE ENVIRONMENT
 A Java program running a operating system of Windows 7 or higher, Mac OS X, or
