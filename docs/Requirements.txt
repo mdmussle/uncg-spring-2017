@@ -5,14 +5,24 @@ Spring 2017
 A. INTRODUCTION
 
 B. GLOSSARY
-Genre (Action / Sports), Game Type (Puzzle / MMO / AAA), Maturity Rating,
-Game Medium (Device / Board), Compatibility, Platform (Consoles only eg. Xbox
-One, PS4), Controller,
-Mods, Expansion Pack, Guides
-Release Date, Pre-order, Quality (New / Used)
-Bugs, Tech Support, Warranty,
-User (Anyone interacting with the system)
-SKU, UPC, Stock (Inventory)
+Genre - A description of the process a narrative is told in a game. (e.g. Drama, Crime, Fantasy)
+Game Type - A description of how a game is played and what skills it may employ. (e.g. Action, Adventure, Strategy)
+ESRB Rating - A letter and description system used to categorize a game's maturity content and intended audience age. 
+Game Medium - A category that describes the means or system in which a game is played. (e.g. Video Game, Board Game, Card Game), 
+Platform (Game System) - A non-PC game medium that is used to play videogames, sometimes called a game system. (e.g. Xbox One, Playstation 4), 
+Compatibility - A description of how able a game is to be played in different platforms.
+Controller - A platform-specific device that allows the user to control a game system and the games on it.
+Modification (Mod) - An alteration that may change how a game is played.
+Expansion Pack - Additional content that is released by a game's developer(s) to add features to the original (base) game.
+Release Date - The date in which a game is released to the general public for purchase.
+Pre-order - A product that is ordered before the intended release date.
+Glitch (Bug) - An unintended fault in the operation of a game or a platform.
+Technical Support - A service for assisting customers with technical questions or issues that regard the operations of a game or game system.
+Warranty - A written garauntee that promises to repair or replace a product within a specified time. (e.g. 2 Year Warranty)
+User - Any employee who may interact with the register system.
+Stock (Inventory) - Goods or materials that are held for the intent of sale or repair.
+Stock Keeping Unit (SKU) - An alphanumeric (A-Z, 0-9) identification of a product specific to a company that allows it to be tracked for inventory purposes.
+Universal Product Code (UPC) - Twelve unique, numeric digits and a corresponding barcode assigned to an item. 
 
 C.GENERAL KNOWLEDGE ABOUT THE DOMAIN
 This system will perform many functions such as: Tracking inventory, sales,
