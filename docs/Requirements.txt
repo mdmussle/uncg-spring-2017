@@ -100,7 +100,7 @@ functions, an override prompt will appear. Special receipt messages can be
 stored locally and referenced at time of receipt printing.
 
 Users: Login will be handled by the database; when a user attempts to
-login, the database will validate their username and password, and the code will
+login, the database will validate their username and password, and the software will
 lock or unlock appropriately. All account management functions operate on the database, 
 and can only occur after user validation (see Security Settings). Overrides will perform 
 operations on any database values, after user validation (see Security Settings).
