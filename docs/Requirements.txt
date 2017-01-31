@@ -7,9 +7,9 @@ A. INTRODUCTION
 B. GLOSSARY
 Genre - A description of the process a narrative is told in a game. (e.g. Drama, Crime, Fantasy)
 Game Type - A description of how a game is played and what skills it may employ. (e.g. Action, Adventure, Strategy)
-ESRB Rating - A letter and description system used to categorize a game's maturity content and intended audience age. 
-Game Medium - A category that describes the means or system in which a game is played. (e.g. Video Game, Board Game, Card Game), 
-Platform (Game System) - A non-PC game medium that is used to play videogames, sometimes called a game system. (e.g. Xbox One, Playstation 4), 
+ESRB Rating - A letter and description system used to categorize a game's maturity content and intended audience age.
+Game Medium - A category that describes the means or system in which a game is played. (e.g. Video Game, Board Game, Card Game),
+Platform (Game System) - A non-PC game medium that is used to play videogames, sometimes called a game system. (e.g. Xbox One, Playstation 4),
 Compatibility - A description of how able a game is to be played in different platforms.
 Controller - A platform-specific device that allows the user to control a game system and the games on it.
 Modification (Mod) - An alteration that may change how a game is played.
@@ -22,7 +22,7 @@ Warranty - A written garauntee that promises to repair or replace a product with
 User - Any employee who may interact with the register system.
 Stock (Inventory) - Goods or materials that are held for the intent of sale or repair.
 Stock Keeping Unit (SKU) - An alphanumeric (A-Z, 0-9) identification of a product specific to a company that allows it to be tracked for inventory purposes.
-Universal Product Code (UPC) - Twelve unique, numeric digits and a corresponding barcode assigned to an item. 
+Universal Product Code (UPC) - Twelve unique, numeric digits and a corresponding barcode assigned to an item.
 
 C.GENERAL KNOWLEDGE ABOUT THE DOMAIN
 This system will perform many functions such as: Tracking inventory, sales,
@@ -39,9 +39,9 @@ CUSTOMERS
 Customers of the game store include adults and adolescents, both groups can be expected to represent a repeat customer base. The
 demographics of the customer base will be based upon the physical location of the store, variety of merchandise sold, volume of
 inventory, and the pricing of the merchandise. Due to the single location of the store and non-electronic nature of the stock,
-face-to-face and online commerce can be expected to be the two ways in which the system is used to sell merchandise.   
+face-to-face and online commerce can be expected to be the two ways in which the system is used to sell merchandise.
 
-USERS 
+USERS
 Sales associates include the floor staff who are in charge of stocking goods and maintaining the appearance of the store. Additional
 sale associates include salespersons and cashiers who assist customers and encourage purchases on the sales floor, they interact
 directly with other employees in the workplace and incoming customers. The sales associates will need to have sufficient knowledge of
@@ -135,11 +135,8 @@ G. COMPETING SOFTWARE
 5. Smartwerks
 
 H. SIMILARITIES ACROSS DOMAINS
-The similarities with our POS system and the other POS systems in the domain is
+The similarities with our POS system and others in the domain is
 the ability to handle simple transactions, track inventory, and handle multiple
-users with different levels of security. The feature that our system does not do
-that other systems do is handle trade-ins. Meaning, that the our system does not
-calculate prices for used products that are being sold to our store or does it
-not calculate the prices for the used products that are to be put on the shelf
-that day. It is assumed that the products that are being sold while using our
-POS system are "new".
+users with different levels of security. Our system does not handle trade-in
+calculations or track used products. It is assumed that the products are sold as
+new.
