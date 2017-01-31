@@ -15,8 +15,8 @@ User (Anyone interacting with the system)
 SKU, UPC, Stock (Inventory)
 
 C.GENERAL KNOWLEDGE ABOUT THE DOMAIN
-This system will perform many functions such as: Tracking inventory, sales,
-handling payments, managing users, calculating pricing, give receipts, returns,
+This system will perform many functions such as: tracking inventory, sales,
+handling payments, managing users, calculating pricing, printing receipts, returns,
 and scanning item barcodes.
 
 This machine will primarily be used for a small store, with no franchises, and
