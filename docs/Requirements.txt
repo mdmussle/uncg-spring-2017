@@ -126,6 +126,7 @@ Tax: Every inventory item will be given an enumeration that corresponds to a
 value in a separate tax database. The local machine will gather the appropriate
 information and calculate tax.
 
+3. Update accounts
 
 G. COMPETING SOFTWARE
 1. Eposnow
