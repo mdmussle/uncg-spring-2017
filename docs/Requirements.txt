@@ -69,63 +69,59 @@ card reader over USB 2.0.
 The main input method should be over keyboard and mouse using USB 2.0.
 
 F. TAKES AND PROCEDURES CURRENTLY PERFORMED
-Point of Sale: Display time on POS and record on transactions. Allow users to
-add and remove items to current transaction.
+Point of Sale: Allow users to process transactions by adding and removing items
+to the transaction (by scanner or entering item manually) and it will record 
+transactions.
 
 Payment: Allow customers to pay in cash or credit. For cash, cashier will enter
 amount and POS will calculate and display change. For credit the POS will read
 the card, then verify and bill through an API (notify of success or failure).
 
-Print Receipt: The POS will print a receipt when the transaction completes. It
-will include the Store name, store phone number, Time, items and prices on
-transaction, subtotal, tax, total, payment method (and change) as well as
-receipt message.
+Print Receipt: The POS will print a receipt when the transaction completes. The
+receipt will include the following information:
+1. Store name and phone number
+2. Time
+3. Items with price
+4. Subtotal, tax and total
+5. Payment method and change
+6. Receipt message
 
 Returns: Load the transaction from receipt number. Check that returned item is
 on transaction. Record the reason for the return. Calculate and display the
-refund amount. Allow for refund to credited to original credit card. Update
-the current inventory with returned item if item is resellable (if return
+refund amount. Pay out the refund in the original payment method. Update
+the current inventory with returned item if item is resalable (if return
 reason allows).
 
-Pricing: This will be handled by the database. All of the info about the
-pricing, including time at point of sale and profit made, will be stored in a
-database and called on when needed.
+Pricing: The system will allow users with appropriate permissions to update
+item prices and set sale pricing for items.
 
-Inventory: This data will also be stored on a database. When a query is made as
-to whether or not we have an item in stock, it will return true if the item
-quantity on hand is above zero, and false if otherwise. Also once items are
-sold, it will subtract the corresponding quantity from the database.
+Inventory: Users with correct permissions will be able to update item inventory
+counts. These numbers are used to verify whether an item is in stock (if the
+quantity is greater than 0). Inventory is also updated when purchases and
+returns are made.
 
-I/O: All of these items, barcode scanner, receipt printer, and cash drawer, will
-work off the serial ports on the computer, and by implementing a script in C,
-so that we can interact with these things in our Java source code.
+I/O: A barcode scanner, receipt printer, and cash drawer work off the serial
+ports on the computer.
 
-Admin settings: Admin settings will also be stored on the database. Whenever a
-user is created, they will be given a ranking, which corresponds to a heirarchy
-table in the database, stating which actions they can and cannot perform. So all
-that will be required of the local system is a simple check of the user’s
-permissions before performing an operation that would require management
-approval, and if the user currently logged in is not approved for those
-functions, an override prompt will appear. Special receipt messages can be
-stored locally and referenced at time of receipt printing.
+Admin Settings: User accounts will be given an access level, which
+corresponds to a hierarchy, stating which actions they can and cannot perform.
+If the currently logged in user does not have access to perform a necessary
+action, then a manager with appropriate access can enter their information and
+perform an override to allow the action.
 
-Users: Login will mostly be handled by the database; when a user attempts to
-log in the database will validate their uName and pWord, and the code will
-handle locking/unlocking based on the signal from the database. Managing
-accounts (CRUD) will all be handled by the database; all CRUD functions will be
-located there, and can be used after user validation (see Security Settings).
-Overrides will perform CRUD operations on any database values, after user
-validation (see Security Settings).
+Users: User login will be verified using a username and password. The system
+will allow users with the permissions to perform the following functions on
+user accounts:
+1. Create new user accounts
+2. Read and verify accounts
+3. Update accounts
+4. Delete accounts
 
-Security Settings: A user database will be maintained, with username, password,
-and privileges. In order to validate privilege, a database call will be made to
-ensure that the user has appropriate authority to perform whatever actions they
-are attempting to perform.
+Security Settings: Login credentials will be stored in the system. Users must
+login before performing any functions on the POS.
 
-Tax: Every inventory item will be given an enumeration that corresponds to a
-value in a separate tax database. The local machine will gather the appropriate
-information and calculate tax.
-
+Tax: The tax rate will be stored by the system and managers will have access to
+update if necessary.
 
 G. COMPETING SOFTWARE
 1. Eposnow
