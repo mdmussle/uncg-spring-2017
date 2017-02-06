@@ -2,6 +2,8 @@ Requirements for the BoffoRegister
 UNCG CSC 340-02
 Spring 2017 - Instructor I. Quigley
 
+This is a test line.
+
 A. INTRODUCTION
 In the modern age efficient and easy to use POS systems are essential for a business to succeed.
 While other competitors offer unique interfaces, BoffoRegister™ offers a simple to use, speedy system
