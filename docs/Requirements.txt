@@ -73,7 +73,7 @@ card reader over USB 2.0.
 
 The main input method should be over keyboard and mouse using USB 2.0.
 
-F. TAKES AND PROCEDURES CURRENTLY PERFORMED
+F. TASKS AND PROCEDURES CURRENTLY PERFORMED
 Point of Sale: Allow users to process transactions by adding and removing items
 to the transaction (by scanner or entering item manually) and it will record 
 transactions.
