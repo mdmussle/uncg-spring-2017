@@ -2,7 +2,7 @@ Requirements for the BoffoRegister
 UNCG CSC 340-02
 Spring 2017 - Instructor I. Quigley
 
-This is where test line two is going. Trying to force a merge conflict.
+This is test line 1 - Trying to force a merge conflict.
 
 A. INTRODUCTION
 In the modern age efficient and easy to use POS systems are essential for a business to succeed.
