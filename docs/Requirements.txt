@@ -97,6 +97,43 @@ refund amount. Pay out the refund in the original payment method. Update
 the current inventory with returned item if item is resalable (if return
 reason allows).
 
+<<<<<<< HEAD
+Pricing: This will be handled by the database. All of the info about the
+pricing, including time at point of sale and profit made, will be stored in a
+database and called on when needed.
+
+Inventory: This data will also be stored on a database. When a query is made as
+to whether or not we have an item in stock, it will return true if the item
+quantity on hand is above zero, and false if otherwise. Also once items are
+sold, it will subtract the corresponding quantity from the database.
+
+I/O: All of these items, barcode scanner, receipt printer, and cash drawer, will
+work off the serial ports on the computer, and by implementing a script in C,
+so that we can interact with these things in our Java source code.
+
+Admin settings: Admin settings will also be stored on the database. Whenever a
+user is created, they will be given a ranking, which corresponds to a heirarchy
+table in the database, stating which actions they can and cannot perform. So all
+that will be required of the local system is a simple check of the user’s
+permissions before performing an operation that would require management
+approval, and if the user currently logged in is not approved for those
+functions, an override prompt will appear. Special receipt messages can be
+stored locally and referenced at time of receipt printing.
+
+Users: Login will be handled by the database; when a user attempts to
+login, the database will validate their username and password, and the software will
+lock or unlock appropriately. All account management functions operate on the database, 
+and can only occur after user validation (see Security Settings). Overrides will perform 
+operations on any database values, after user validation (see Security Settings).
+
+Security Settings: A user database will be maintained, with username, password,
+and privileges. In order to validate privilege, a database call will be made to
+ensure that the user has appropriate authority to perform whatever actions they
+are attempting to perform.
+
+Tax: On checkout, the purchased items costs will be multiplied by an administrator supplied
+tax rate to calculate the final cost.
+=======
 Pricing: The system will allow users with appropriate permissions to update
 item prices and set sale pricing for items.
 
@@ -127,6 +164,7 @@ login before performing any functions on the POS.
 
 Tax: The tax rate will be stored by the system and managers will have access to
 update if necessary.
+>>>>>>> refs/remotes/origin/master
 
 G. COMPETING SOFTWARE
 1. Eposnow
@@ -138,6 +176,15 @@ G. COMPETING SOFTWARE
 H. SIMILARITIES ACROSS DOMAINS
 The similarities with our POS system and others in the domain is
 the ability to handle simple transactions, track inventory, and handle multiple
+<<<<<<< HEAD
+users with different levels of security. The feature that our system does not do
+that other systems do is handle trade-ins. Meaning, that the our system does not
+calculate prices for used products that are being sold to our store or does it
+not calculate the prices for the used products that are to be put on the shelf
+that day. It is assumed that the products that are being sold while using our
+POS system are "new".
+=======
 users with different levels of security. Our system does not handle trade-in
 calculations or track used products. It is assumed that the products are sold as
 new.
+>>>>>>> refs/remotes/origin/master
