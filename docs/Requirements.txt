@@ -1,4 +1,4 @@
-﻿Requirements for the BoffoRegister
+Requirements for the BoffoRegister
 UNCG CSC 340-02
 Spring 2017
 
@@ -73,7 +73,7 @@ card reader over USB 2.0.
 
 The main input method should be over keyboard and mouse using USB 2.0.
 
-F. TASKS AND PROCEDURES CURRENTLY PERFORMED
+F. TAKES AND PROCEDURES CURRENTLY PERFORMED
 Point of Sale: Allow users to process transactions by adding and removing items
 to the transaction (by scanner or entering item manually) and it will record 
 transactions.
@@ -97,7 +97,6 @@ refund amount. Pay out the refund in the original payment method. Update
 the current inventory with returned item if item is resalable (if return
 reason allows).
 
-<<<<<<< HEAD
 Pricing: This will be handled by the database. All of the info about the
 pricing, including time at point of sale and profit made, will be stored in a
 database and called on when needed.
@@ -133,38 +132,6 @@ are attempting to perform.
 
 Tax: On checkout, the purchased items costs will be multiplied by an administrator supplied
 tax rate to calculate the final cost.
-=======
-Pricing: The system will allow users with appropriate permissions to update
-item prices and set sale pricing for items.
-
-Inventory: Users with correct permissions will be able to update item inventory
-counts. These numbers are used to verify whether an item is in stock (if the
-quantity is greater than 0). Inventory is also updated when purchases and
-returns are made.
-
-I/O: A barcode scanner, receipt printer, and cash drawer work off the serial
-ports on the computer.
-
-Admin Settings: User accounts will be given an access level, which
-corresponds to a hierarchy, stating which actions they can and cannot perform.
-If the currently logged in user does not have access to perform a necessary
-action, then a manager with appropriate access can enter their information and
-perform an override to allow the action.
-
-Users: User login will be verified using a username and password. The system
-will allow users with the permissions to perform the following functions on
-user accounts:
-1. Create new user accounts
-2. Read and verify accounts
-3. Update accounts
-4. Delete accounts
-
-Security Settings: Login credentials will be stored in the system. Users must
-login before performing any functions on the POS.
-
-Tax: The tax rate will be stored by the system and managers will have access to
-update if necessary.
->>>>>>> refs/remotes/origin/master
 
 G. COMPETING SOFTWARE
 1. Eposnow
@@ -176,15 +143,6 @@ G. COMPETING SOFTWARE
 H. SIMILARITIES ACROSS DOMAINS
 The similarities with our POS system and others in the domain is
 the ability to handle simple transactions, track inventory, and handle multiple
-<<<<<<< HEAD
-users with different levels of security. The feature that our system does not do
-that other systems do is handle trade-ins. Meaning, that the our system does not
-calculate prices for used products that are being sold to our store or does it
-not calculate the prices for the used products that are to be put on the shelf
-that day. It is assumed that the products that are being sold while using our
-POS system are "new".
-=======
 users with different levels of security. Our system does not handle trade-in
 calculations or track used products. It is assumed that the products are sold as
 new.
->>>>>>> refs/remotes/origin/master
