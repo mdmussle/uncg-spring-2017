@@ -1,6 +1,6 @@
 Requirements for the BoffoRegister
 UNCG CSC 340-02
-Spring 2017
+Spring 2017 - Instructor I. Quigley
 
 A. INTRODUCTION
 
