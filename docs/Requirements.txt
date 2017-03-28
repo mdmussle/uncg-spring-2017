@@ -3,6 +3,11 @@ UNCG CSC 340-02
 Spring 2017
 
 A. INTRODUCTION
+In the modern age efficient and easy to use POS systems are essential for a business to succeed. 
+While other competitors offer unique interfaces, BoffoRegister™ offers a simple to use, speedy system 
+that gets your customers out the door as fast as possible. Other POS systems are clogged with 
+unnecessary features built for other stores. BoffoRegister™ is built from the ground up, from sales 
+to refunds to important manager features, to appeal to GameKnight and their unique business challenges. 
 
 B. GLOSSARY
 Genre - A description of the process a narrative is told in a game. (e.g. Drama, Crime, Fantasy)
