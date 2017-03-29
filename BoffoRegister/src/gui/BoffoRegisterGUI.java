@@ -20,6 +20,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import events.BoffoEvent;
+import events.BoffoMessenger;
 /**
  *
  * @author Logan Stanfield and Kevin Keomalaythong
@@ -33,21 +35,21 @@ public final class BoffoRegisterGUI {
         this.primaryStage = _primaryStage;
         this.loadLoginPanel();
     }
-    
+
     /*
      * TODO: Stubbed in method for loading Admin panel
      */
     public void loadAdminPanel() {
-        
+
     }
-    
+
     /*
      * TODO: Stubbed in method for loading Inventory panel
      */
     public void loadInventoryPanel() {
-        
+
     }
-    
+
     /*
      * Loads the login panel
      */
@@ -55,7 +57,8 @@ public final class BoffoRegisterGUI {
         System.out.println("Loading Login Panel");
         primaryStage.setTitle("BoffoRegister Login");
         Scene loginScene = this.buildLoginScene();
-        primaryStage.setScene(loginScene);           //Sets up the primary stage
+        this.primaryStage.setScene(loginScene);
+        //Sets up the primary stage.
         this.primaryStage.show();
     }
 
@@ -86,6 +89,9 @@ public final class BoffoRegisterGUI {
 
     }
 
+    public void launchTransaction(){
+        loadMainPanel();
+    }
     /*
     * This method helps build the login in panel. Creates a TextField, a
     * PaswordField, and a sign-in button
@@ -125,11 +131,9 @@ public final class BoffoRegisterGUI {
         grid.add(actiontarget, 1, 6);
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent e) {
-                //TODO: Fix to check if user credentials are valid
-                loadMainPanel();       //This is always goes into the main panel
+                BoffoEvent evt = new BoffoEvent(e.getSource(), BoffoMessenger.ADD_TRANSACTION);
             }
         });
 
@@ -148,16 +152,16 @@ public final class BoffoRegisterGUI {
         vbox.getChildren().add(btnTransaction);
         // Create the scene and return.
         Scene scene = new Scene(vbox, 800, 600);
-        
+
         btnTransaction.setOnAction(new EventHandler<ActionEvent>() {
-           
+
             @Override
             public void handle(ActionEvent e) {
                 loadTransactionPanel();
             }
-                    
+
         });
-        
+
         return scene;
     }
 
@@ -167,31 +171,31 @@ public final class BoffoRegisterGUI {
      *    including an exit button to return to main panel
      */
     public Scene buildTransactionPanel() {
-        
+
         Button addItem1Btn = new Button();
         addItem1Btn.setText("Add item 1");
-        
+
         Button addItem2Btn = new Button();
         addItem2Btn.setText("Add item 2");
-        
+
         Button exitBtn = new Button();
         exitBtn.setText("Exit");
-        
+
         VBox vbox = this.addVBox("Select Operation");
         vbox.getChildren().add(addItem1Btn);
         vbox.getChildren().add(addItem2Btn);
         vbox.getChildren().add(exitBtn);
-        
+
         Scene transScene = new Scene(vbox, 800, 600);
-        
+
         exitBtn.setOnAction(new EventHandler<ActionEvent>() {
-            
+
             @Override
             public void handle(ActionEvent e) {
                 loadMainPanel();
             }
         });
-        
+
         return transScene;
     }
 
