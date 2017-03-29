@@ -1,5 +1,6 @@
 package bofforegister;
 
+import gui.BoffoRegisterGUI;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -7,8 +8,8 @@ public class Main extends Application {
 
    @Override
     public void start(Stage primaryStage) {
-        // Create a BoffoRegister object.
-        BoffoRegister register = new BoffoRegister(primaryStage);
+        // Create a BoffoRegisterGUI object.
+        BoffoRegisterGUI register = new BoffoRegisterGUI(primaryStage);
     }
 
     /**
