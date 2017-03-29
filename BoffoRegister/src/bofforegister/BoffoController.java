@@ -6,7 +6,7 @@
 package bofforegister;
 
 //import (some modules)
-//import gui.BoffoGUI;
+import gui.BoffoRegisterGUI;
 import javafx.stage.Stage;
 //import boffoevents.RegisterEvent;
 //import boffoevents.RegisterMessage;
@@ -18,13 +18,12 @@ import javafx.stage.Stage;
 public class BoffoController {
     
     //Add references to required modules
-    /*
-    protected BoffoGUI gui;
-    protected BoffoRegisterModule activemodule = null;
-    */
+    
+    protected BoffoRegisterGUI gui;
+//    protected BoffoRegisterModule activemodule = null;
     
     BoffoController(Stage primaryStage) {
-//        this.gui = new BoffoGUI(primaryStage);
+        this.gui = new BoffoRegisterGUI(primaryStage);
 //        this.gui.addBRegisterListener(this);
     }
     
@@ -35,7 +34,9 @@ public class BoffoController {
      * is called.
      */
     private void mainPanel() {
-        
+        this.gui.loadMainPanel();
+//        this.gui.removeBRegisterListener(this.activeModule);
+//        this.activeModule = null;
     }
     
     private void transactionPanel() {
