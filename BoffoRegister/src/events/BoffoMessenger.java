@@ -1,3 +1,5 @@
+package events;
+
 //Maclean Frazier
 
 public class BoffoMessenger {
