@@ -16,17 +16,26 @@ import javafx.stage.Stage;
  * @author joshuabr7 & joshlmilligan
  */
 public class BoffoController {
-    
+
     //Add references to required modules
-    
+
+    // LoginModule : BoffoModule
+
+    // AdministrationModule : BoffoModule
+
+    // UserModule : BoffoModule
+
+    // InventoryModule : BoffoModule
+
+    // Printer
+
     protected BoffoRegisterGUI gui;
-//    protected BoffoRegisterModule activemodule = null;
-    
+
     BoffoController(Stage primaryStage) {
         this.gui = new BoffoRegisterGUI(primaryStage);
 //        this.gui.addBRegisterListener(this);
     }
-    
+
     /*
      * Will include each panel to be loaded by the GUI
      * and add listeners.
@@ -38,20 +47,47 @@ public class BoffoController {
 //        this.gui.removeBRegisterListener(this.activeModule);
 //        this.activeModule = null;
     }
-    
+
     private void transactionPanel() {
-        
+
     }
-    
+
     private void inventoryPanel() {
-        
+
     }
-    
+
+    public void changePanel(int event) {
+        switch(event) {
+//            case LOGIN_PANEL:        // Change to the Login Panel.
+//
+//                break;
+//
+//            case MAIN_PANEL:        // Change to the Main Panel.
+//                mainPanel();
+//                break;
+//
+//            case ADMIN_PANEL:       // Change to the Admin Panel.
+//
+//                break;
+//
+//            case INVENTORY_PANEL:   // Change to the Inventory Panel.
+//
+//                break;
+//
+//            case TRANSACTION_PANEL: // Change to the Transaction Panel
+//
+//                break;
+
+            default:
+                // If its not a panel change event, ignore it.
+                break;
+        }
+    }
 //    private void registerPanelListener(BoffoRegisterModule newModule) {
 //        this.activemodule = newModule;
 //        this.gui.addBRegisterListener;
 //    }
-    
+
 //    @Override
 //    public void messageReceived(RegisterEvent event) {
 //        // We're only interested in 3 particular events.
@@ -59,7 +95,7 @@ public class BoffoController {
 //            case RegisterMessage.TRANSACTION_PANEL:
 //                System.out.println("Controller Responding to Transaction Panel Event.");
 //                this.transactionPanel();
-//                break;            
+//                break;
 //            case RegisterMessage.INVENTORY_PANEL:
 //                System.out.println("Controller Responding to Inventory Panel Event.");
 //                this.inventoryPanel();
