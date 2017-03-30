@@ -4,17 +4,17 @@ package events;
 
 import java.util.EventObject;
 
-public class BoffoEvents extends EventObject {
-    
+public class BoffoEvent extends EventObject {
+
     private final BoffoMessenger message;
-    
-    public BoffoEvents(Object source, BoffoMessenger message) {
+
+    public BoffoEvent(Object source, int messageString) {
         super(source);
-        this.message = message;
+        this.message = new BoffoMessenger(messageString);
     }
-    
+
     public BoffoMessenger getMessage() {
         return message;
     }
-    
+
 }
