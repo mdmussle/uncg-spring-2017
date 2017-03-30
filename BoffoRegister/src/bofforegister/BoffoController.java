@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bofforegister;
 
-//import (some modules)
 import gui.BoffoRegisterGUI;
 import javafx.stage.Stage;
-//import boffoevents.RegisterEvent;
-//import boffoevents.RegisterMessage;
+import events.BoffoEvent;
+
+import transaction.Transaction;
 
 /**
  *
@@ -30,6 +25,9 @@ public class BoffoController {
     // Printer
 
     protected BoffoRegisterGUI gui;
+    protected BoffoRegisterGUI gui;
+    protected Transaction transaction;
+//    protected BoffoRegisterModule activemodule = null;
 
     BoffoController(Stage primaryStage) {
         this.gui = new BoffoRegisterGUI(primaryStage);
@@ -83,30 +81,10 @@ public class BoffoController {
                 break;
         }
     }
+    }
+
 //    private void registerPanelListener(BoffoRegisterModule newModule) {
 //        this.activemodule = newModule;
 //        this.gui.addBRegisterListener;
-//    }
-
-//    @Override
-//    public void messageReceived(RegisterEvent event) {
-//        // We're only interested in 3 particular events.
-//        switch (event.getMessage().getCode()){
-//            case RegisterMessage.TRANSACTION_PANEL:
-//                System.out.println("Controller Responding to Transaction Panel Event.");
-//                this.transactionPanel();
-//                break;
-//            case RegisterMessage.INVENTORY_PANEL:
-//                System.out.println("Controller Responding to Inventory Panel Event.");
-//                this.inventoryPanel();
-//                break;
-//            case RegisterMessage.EXIT_PANEL:
-//                System.out.println("Controller Responding to Main Menu Panel Event.");
-//                this.mainPanel();
-//                break;
-//            default:
-//                System.out.println("Ignoring Message Code as Irrelevant to Controller. " + event.getMessage().getCode());
-//                break;
-//        }
 //    }
 }
