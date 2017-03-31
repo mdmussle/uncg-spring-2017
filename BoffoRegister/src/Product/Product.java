@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Product{
 
         protected Product prod;
@@ -15,14 +18,16 @@ public class Product{
         this.price = 0.00;
         this.UPC = 0;
         this.SKU = "";
+        this.rating = null;
     }
-    public Product(Product prod, String name, int quant, double price, int UPC, String s){
+    public Product(Product prod, String name, int quant, double price, int UPC, String s, enum e){
        this.prod = prod;
        this.name = name;
        this.quantity = quant;
        this.price = price;
        this.UPC = UPC;
        this.SKU = s;
+       this.rating = e;
     }
     public Product getProduct(){
         return this.prod;
