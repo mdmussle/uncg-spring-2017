@@ -56,7 +56,27 @@ public class Product{
         }
     }
     public Product findBySKU(String s){
-        //keep narrowest scope possible for parameter String s
+        //Keep narrowest scope possible for parameter s.
+        return null;
+    }
+    public Product findByUPC(int u){
+        //Keep narrowest scope possible for parameter i.
+        return null;
+    }
+    public Product findByName(String n){
+        //Keep narrowest scope possible for parameter n.
+        return null;
+    }
+    public List findbyQuantity(int n){
+        /*Find the products that have quantity n and return
+        a list of those products.*/
+        return null;
+    }
+    public Product findByPrice(double p){
+        /*Depending on the variety of products will this method 
+        be able to find a specific product. Otherwise, return a list of 
+        products that have parameter p.
+        */
         return null;
     }
 } 
