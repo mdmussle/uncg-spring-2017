@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 
 import events.BoffoEvent;
 import events.BoffoMessenger;
+import events.Routing;
 /**
  *
  * @author Logan Stanfield and Kevin Keomalaythong
@@ -133,7 +134,7 @@ public final class BoffoRegisterGUI {
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                BoffoEvent evt = new BoffoEvent(e.getSource(), BoffoMessenger.ADD_TRANSACTION);
+                BoffoEvent evt = new BoffoEvent(e.getSource(), Routing.ADD_TRANSACTION);
             }
         });
 
