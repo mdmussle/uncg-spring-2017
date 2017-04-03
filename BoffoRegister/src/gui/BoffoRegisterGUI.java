@@ -1,6 +1,8 @@
-/*
+/**
  * Boffo Register GUI
+ * @author Logan Stanfield and Kevin Keomalaythong
  */
+
 package gui;
 
 import javafx.geometry.Insets;
@@ -22,66 +24,52 @@ import javafx.stage.Stage;
 
 import events.BoffoEvent;
 import events.BoffoMessenger;
-/**
- *
- * @author Logan Stanfield and Kevin Keomalaythong
- * @version 0.1
- */
+
 public final class BoffoRegisterGUI {
 
-    private final Stage primaryStage;
+    private final Stage BoffoStage;
 
-    public BoffoRegisterGUI(Stage _primaryStage) {
-        this.primaryStage = _primaryStage;
+    public BoffoRegisterGUI(Stage s) {
+        this.BoffoStage = s;
         this.loadLoginPanel();
     }
 
-    /*
-     * TODO: Stubbed in method for loading Admin panel
-     */
+    //TODO: Stubbed in method for loading Admin panel
     public void loadAdminPanel() {
 
     }
 
-    /*
-     * TODO: Stubbed in method for loading Inventory panel
-     */
+    //TODO: Stubbed in method for loading Inventory panel
     public void loadInventoryPanel() {
 
     }
 
-    /*
-     * Loads the login panel
-     */
     public void loadLoginPanel() {
         System.out.println("Loading Login Panel");
-        primaryStage.setTitle("BoffoRegister Login");
+        BoffoStage.setTitle("BoffoRegister Login");
         Scene loginScene = this.buildLoginScene();
-        this.primaryStage.setScene(loginScene);
+        this.BoffoStage.setScene(loginScene);
+        
         //Sets up the primary stage.
-        this.primaryStage.show();
+        this.BoffoStage.show();
     }
 
-    /*
-     * Loads the main panel
-     */
     public void loadMainPanel() {
         System.out.println("Loading Main Panel");
-        primaryStage.setTitle("Boffo Register Main Menu");
+        BoffoStage.setTitle("Boffo Register Main Menu");
         Scene mainScene = this.buildMainScene();
-        primaryStage.setScene(mainScene);            //Sets up the primary stage
-        this.primaryStage.show();
+        
+        //Set up the primary stage.
+        BoffoStage.setScene(mainScene);
+        this.BoffoStage.show();
     }
 
-    /*
-     * Loads Transaction panel
-     */
     public void loadTransactionPanel() {
         System.out.println("Loading Transaction Panel");
-        primaryStage.setTitle("Transaction");
-        Scene transScene = buildTransactionPanel();
-        primaryStage.setScene(transScene);
-        primaryStage.show();
+        BoffoStage.setTitle("Transaction");
+        Scene transactionScene = buildTransactionPanel();
+        BoffoStage.setScene(transactionScene);
+        BoffoStage.show();
     }
 
     //TODO: Stubbed in method for building the admin scene
@@ -92,10 +80,8 @@ public final class BoffoRegisterGUI {
     public void launchTransaction(){
         loadMainPanel();
     }
-    /*
-    * This method helps build the login in panel. Creates a TextField, a
-    * PaswordField, and a sign-in button
-     */
+
+    //Login screen with username & password text fields, plus a sign-in button.
     public Scene buildLoginScene() {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
@@ -104,7 +90,7 @@ public final class BoffoRegisterGUI {
         grid.setPadding(new Insets(25, 25, 25, 25));
         Scene scene = new Scene(grid, 325, 275);
 
-        //Adds a title with specified font and text
+        //Add a title with specified font and text to the scene.
         Text sceneTitle = new Text("Welcome to BoffoRegister");
         sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         grid.add(sceneTitle, 0, 0, 2, 1);
@@ -121,19 +107,22 @@ public final class BoffoRegisterGUI {
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
 
-        Button btn = new Button("Sign In");
-        HBox hbBtn = new HBox(10);
-        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().add((btn));
-        grid.add(hbBtn, 1, 4);
+        Button signInBtn = new Button("Sign In");
+        HBox signInHB = new HBox(10);
+        signInHB.setAlignment(Pos.BOTTOM_RIGHT);
+        signInHB.getChildren().add(signInBtn);
+        grid.add(signInHB, 1, 4);
 
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
 
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        //Fire an event upon pressing the Sign In button.
+        signInBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                BoffoEvent evt = new BoffoEvent(e.getSource(), BoffoMessenger.ADD_TRANSACTION);
+                loadMainPanel();
+//                BoffoEvent evt = new BoffoEvent(e.getSource(), 
+//                        BoffoMessenger.ADD_TRANSACTION);
             }
         });
 
@@ -146,21 +135,39 @@ public final class BoffoRegisterGUI {
     }
 
     public Scene buildMainScene() {
-        Button btnTransaction = new Button();
-        btnTransaction.setText("Transaction");
         VBox vbox = this.addVBox("Select Operation");
-        vbox.getChildren().add(btnTransaction);
-        // Create the scene and return.
-        Scene scene = new Scene(vbox, 800, 600);
+        vbox.setAlignment(Pos.CENTER);
 
+        Button btnTransaction = new Button("Transaction");
+        vbox.getChildren().add(btnTransaction);
+
+        Button btnInventory = new Button("Inventory");
+        vbox.getChildren().add(btnInventory);
+
+        //Fire an event upon pressing the Transaction button.
         btnTransaction.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent e) {
-                loadTransactionPanel();
+                //loadTransactionPanel();
+                BoffoEvent transactionEvt = new BoffoEvent(e.getSource(), 
+                        BoffoMessenger.TRANSACTION_PANEL);
             }
 
         });
+
+        //Fire an event upon pressing the Inventory button.
+        btnInventory.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent e) {
+                //loadInventoryPanel();
+            }
+            
+        });
+
+        // Create the scene and return.
+        Scene scene = new Scene(vbox, 325, 275);
 
         return scene;
     }
@@ -172,49 +179,57 @@ public final class BoffoRegisterGUI {
      */
     public Scene buildTransactionPanel() {
 
-        Button addItem1Btn = new Button();
-        addItem1Btn.setText("Add item 1");
+        Button addItem1Btn = new Button("Add item 1");
+        Button addItem2Btn = new Button("Add item 2");
+        Button exitBtn = new Button("Exit");
 
-        Button addItem2Btn = new Button();
-        addItem2Btn.setText("Add item 2");
+        VBox transactionOptionsVB = this.addVBox("Select Operation");
+        transactionOptionsVB.getChildren().add(addItem1Btn);
+        transactionOptionsVB.getChildren().add(addItem2Btn);
+        transactionOptionsVB.getChildren().add(exitBtn);
 
-        Button exitBtn = new Button();
-        exitBtn.setText("Exit");
+        Scene transactionScene = new Scene(transactionOptionsVB, 800, 600);
 
-        VBox vbox = this.addVBox("Select Operation");
-        vbox.getChildren().add(addItem1Btn);
-        vbox.getChildren().add(addItem2Btn);
-        vbox.getChildren().add(exitBtn);
+        addItem1Btn.setOnAction(new EventHandler<ActionEvent>() {
 
-        Scene transScene = new Scene(vbox, 800, 600);
+            @Override
+            public void handle(ActionEvent e) {/*...*/}
+            
+        });
+        
+        addItem2Btn.setOnAction(new EventHandler<ActionEvent>() {
 
+            @Override
+            public void handle(ActionEvent e) {/*...*/}
+            
+        });
+        
+        //Fire an event upon pressing the Exit button.
         exitBtn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent e) {
-                loadMainPanel();
+                //loadMainPanel();
+                BoffoEvent exitEvt = new BoffoEvent(e.getSource(), 
+                        BoffoMessenger.EXIT_PANEL);
             }
+            
         });
 
-        return transScene;
+        return transactionScene;
     }
 
-    /*
-     * Creates a vertical box with a header.
-     */
     private VBox addVBox(String header) {
         VBox vbox = new VBox();
         vbox.setPadding(new Insets(10));
         vbox.setSpacing(8);
-        // Menu Title
         Text title = new Text(header);
-        title.setFont(Font.font("Tahoma", FontWeight.BOLD, 14));
+        title.setFont(Font.font("Tahoma", FontWeight.BOLD, 20));
         vbox.getChildren().add(title);
         return vbox;
     }
-    /*
-     * TODO: Stubbed in method to check if entered credentials are valid
-    */
+
+    //TODO: Stubbed in method to check if entered credentials are valid
     private boolean isValidUser() {
         return true;
     }
