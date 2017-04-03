@@ -49,7 +49,7 @@ public final class BoffoRegisterGUI {
         BoffoStage.setTitle("BoffoRegister Login");
         Scene loginScene = this.buildLoginScene();
         this.BoffoStage.setScene(loginScene);
-        
+
         //Sets up the primary stage.
         this.BoffoStage.show();
     }
@@ -58,7 +58,7 @@ public final class BoffoRegisterGUI {
         System.out.println("Loading Main Panel");
         BoffoStage.setTitle("Boffo Register Main Menu");
         Scene mainScene = this.buildMainScene();
-        
+
         //Set up the primary stage.
         BoffoStage.setScene(mainScene);
         this.BoffoStage.show();
@@ -121,7 +121,7 @@ public final class BoffoRegisterGUI {
             @Override
             public void handle(ActionEvent e) {
                 loadMainPanel();
-//                BoffoEvent evt = new BoffoEvent(e.getSource(), 
+//                BoffoEvent evt = new BoffoEvent(e.getSource(),
 //                        BoffoMessenger.ADD_TRANSACTION);
             }
         });
@@ -150,7 +150,7 @@ public final class BoffoRegisterGUI {
             @Override
             public void handle(ActionEvent e) {
                 //loadTransactionPanel();
-                BoffoEvent transactionEvt = new BoffoEvent(e.getSource(), 
+                BoffoEvent transactionEvt = new BoffoEvent(e.getSource(),
                         BoffoMessenger.TRANSACTION_PANEL);
             }
 
@@ -158,12 +158,12 @@ public final class BoffoRegisterGUI {
 
         //Fire an event upon pressing the Inventory button.
         btnInventory.setOnAction(new EventHandler<ActionEvent>() {
-            
+
             @Override
             public void handle(ActionEvent e) {
                 //loadInventoryPanel();
             }
-            
+
         });
 
         // Create the scene and return.
@@ -194,26 +194,26 @@ public final class BoffoRegisterGUI {
 
             @Override
             public void handle(ActionEvent e) {/*...*/}
-            
+
         });
-        
+
         addItem2Btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent e) {/*...*/}
-            
+
         });
-        
+
         //Fire an event upon pressing the Exit button.
         exitBtn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent e) {
                 //loadMainPanel();
-                BoffoEvent exitEvt = new BoffoEvent(e.getSource(), 
+                BoffoEvent exitEvt = new BoffoEvent(e.getSource(),
                         BoffoMessenger.EXIT_PANEL);
             }
-            
+
         });
 
         return transactionScene;
