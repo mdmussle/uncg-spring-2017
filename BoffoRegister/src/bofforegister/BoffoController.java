@@ -1,8 +1,10 @@
 package bofforegister;
 
+import events.BoffoEvent;
 import gui.BoffoRegisterGUI;
 import javafx.stage.Stage;
-import events.BoffoEvent;
+import events.BoffoListenerInterface;
+import events.BoffoMessenger;
 
 import transaction.Transaction;
 
@@ -10,28 +12,15 @@ import transaction.Transaction;
  *
  * @author joshuabr7 & joshlmilligan
  */
-public class BoffoController {
+public class BoffoController implements BoffoListenerInterface{
 
     //Add references to required modules
 
-    // LoginModule : BoffoModule
-
-    // AdministrationModule : BoffoModule
-
-    // UserModule : BoffoModule
-
-    // InventoryModule : BoffoModule
-
-    // Printer
-
-    protected BoffoRegisterGUI gui;
     protected BoffoRegisterGUI gui;
     protected Transaction transaction;
-//    protected BoffoRegisterModule activemodule = null;
 
     BoffoController(Stage primaryStage) {
         this.gui = new BoffoRegisterGUI(primaryStage);
-//        this.gui.addBRegisterListener(this);
     }
 
     /*
@@ -42,49 +31,39 @@ public class BoffoController {
      */
     private void mainPanel() {
         this.gui.loadMainPanel();
-//        this.gui.removeBRegisterListener(this.activeModule);
-//        this.activeModule = null;
     }
 
     private void transactionPanel() {
-
+        this.gui.loadTransactionPanel();
     }
 
     private void inventoryPanel() {
 
     }
 
-    public void changePanel(int event) {
-        switch(event) {
-//            case LOGIN_PANEL:        // Change to the Login Panel.
-//
-//                break;
-//
-//            case MAIN_PANEL:        // Change to the Main Panel.
-//                mainPanel();
-//                break;
-//
-//            case ADMIN_PANEL:       // Change to the Admin Panel.
-//
-//                break;
-//
-//            case INVENTORY_PANEL:   // Change to the Inventory Panel.
-//
-//                break;
-//
-//            case TRANSACTION_PANEL: // Change to the Transaction Panel
-//
-//                break;
+    private void loginPanel() {
 
-            default:
-                // If its not a panel change event, ignore it.
+    }
+
+    private void registerPanelListener() {
+
+    }
+
+    @Override
+    public void messageRecieved(BoffoEvent event) {
+        switch (event.getMessage().getCode()) {
+            case BoffoMessenger.TRANSACTION_PANEL:
+                System.out.println("Boffo Controller responding to Transaction Panel Event...");
+                this.transactionPanel();
                 break;
+            case BoffoMessenger.EXIT_PANEL:
+                System.out.println("Boffo Controller responding to Main Menu Panel Event...");
+                this.mainPanel();
+                break;
+            default:
+                System.out.println("Ignoring message because it is irrelevant to the Controller. "
+                                        + "\nPassing along the following event message "
+                                        + event.getMessage().getCode());
         }
     }
-    }
-
-//    private void registerPanelListener(BoffoRegisterModule newModule) {
-//        this.activemodule = newModule;
-//        this.gui.addBRegisterListener;
-//    }
 }
